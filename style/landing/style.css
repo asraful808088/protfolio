@@ -806,7 +806,11 @@ body .protfolio #backend .card:nth-child(4) .image .icon {
 body .protfolio #backend .card:nth-child(5) .image .icon {
   transform: scale(0.75);
 }
-
+body .protfolio .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body .protfolio .card-items .card .image .icon img {
   width: 100%;
 }
@@ -927,14 +931,17 @@ body .protfolio .project .bg .icon {
 body .protfolio .project .image-item {
   min-width: 700px;
   padding: 20px;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+
   /* background-color: green; */
+  height: auto;
+  width: 100%;
+  aspect-ratio: 2/1.49482644459305 !important; 
+  position: relative !important;
 }
-body .protfolio .project .image-item::before {
+/* body .protfolio .project .image-item::before {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -943,13 +950,17 @@ body .protfolio .project .image-item::before {
   top: 0;
   background: radial-gradient(rgba(255, 255, 255, 0.212), transparent);
   filter: blur(50px);
-}
+} */
 body .protfolio .project .image-item .com {
-  position: absolute;
+  position: relative;
   z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
+ /* aspect-ratio: 2/1.49482644459305 !important; */
+}
+body .protfolio .project .image-item  img{
+  width: 100% !important;
 }
 body .protfolio .project .image-item .com:nth-child(1) {
   transform: translate(-0%, 0%) scale(1.3);
@@ -1074,9 +1085,9 @@ body .protfolio .project .text-context .button-box .button .btn-bg .re-bg {
     flex-direction: column;
     align-items: center;
   }
-  body .protfolio .project .image-item {
+  /* body .protfolio .project .image-item {
     height: 700px;
-  }
+  } */
   body .protfolio .project .text-context {
     width: 100%;
   }
@@ -1087,9 +1098,8 @@ body .protfolio .project .text-context .button-box .button .btn-bg .re-bg {
   }
   body .protfolio .project .image-item {
     height: auto;
-    width: 600px;
-    /* background-color: red; */
-    aspect-ratio: 1.458333333333333/1;
+    min-width: 100%;
+    
   }
 }
 
