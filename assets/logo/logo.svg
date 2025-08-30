@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="114.75" height="194.875" viewBox="0 0 114.75 194.875">
+  <g id="Group_2" data-name="Group 2" transform="translate(-445.625 -159)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-313 -38)">
+      <path id="Path_1" data-name="Path 1" d="M728.625,523.25v5.125h48.75V523.25H775.25l-.625-1.125H773.5l-.875-1v-76.75s2.032,8.229,10.846,4.427,13.654,5.573,13.654,5.573l.5,66.75h-1.25v2.125l-1.625-.625-1.125.625H792.25v5.125H841.5v-5.75h-2.75v-1.5h-1.5v-1H835.5v-1.75h-1.25V517l-1.5-.75v-7.625H824l.5-64.25h17.375v-5.25h-3v-.875H836.75v-2.125h-1.875v-2H832.75V427.25H824.5l-.125-75h6.875v-3.625h1.375v-2h1.5v-2h2.125v-2h2.125L839,340.25h2.625V334.5h-113.5v5.75h2.75v1.625h1.875v1.5h2.125V345.5h1.5v2.125h1.25V354h8.25v73.25h-8.25v4h-1.25v4.125h-1.5l-.625,1.5-1.5,1.375-2.75.875-1.875,1.125v5.25h17.75v64.25H738.25v3.625h-.625V515h-1.25v2h-.75v1.375H734.25V519.5h-1.5v.625l-1.375,1h-2.75Z" transform="translate(31 -137)" fill="#e4c590" stroke="#000" stroke-width="1"/>
+      <path id="Path_2" data-name="Path 2" d="M797.143,417.714V374.922l-1.112.063V372h-.984v-2h-2.078v-2.016h-2.016v-1.969H779.984v1.969h-2.953V370h-2.062c-.516,0-.484,1.047-.484,1.047V373h-1.5v1.953H772.5v43.214l24.643.417Z" transform="translate(31 -137)" fill="black"  stroke="none" stroke-width="0"/>
+      <path id="Path_3" data-name="Path 3" d="M817,446.571Z" transform="translate(31 -137)" fill="#fff" stroke="none" stroke-width="0"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asraful Islam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./module/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/logo/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/landing/style.css" />
+  </head>
+  <body>
+    <div class="blur-box" id="blur-box">
+      <div class="blur-bg"></div>
+      <div class="video-box">
+        <div class="close-bar" onclick="changeVideoFrameShowStatus(1)">
+          <img src="./assets/png/cross.png" alt="" />
+        </div>
+        <iframe
+          id="video_1"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/Qd0R0B42dZU"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          id="video_2"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/9_SH-b1d970"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+        <iframe
+          id="video_3"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/Qd0R0B42dZU"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="logo">
+        <img src="./assets/logo/logo.svg" alt="" />
+      </div>
+      <nav class="nav">
+        <div class="item m-deactive">
+          <a href="#home">Home</a>
+          <div class="active-link-bar"></div>
+        </div>
+        <div class="item m-deactive">
+          <a href="#about">about</a>
+          <div class="active-link-bar"></div>
+        </div>
+        <div class="item m-deactive">
+          <a href="#protfolio">protfolio</a>
+          <div class="active-link-bar"></div>
+        </div>
+
+        <div class="item m-deactive">
+          <a href="#project">project</a>
+          <div class="active active-link-bar"></div>
+        </div>
+
+        <a href="#contact">
+          <div class="item button m-deactive" role="button">
+            <span>Contact</span>
+            <div class="hover-box">contact</div>
+          </div>
+        </a>
+
+        <div
+          class="menu-c-button m-active"
+          onclick="changeMobileNavbarStatus()"
+        >
+          <img
+            id="menu-deactive"
+            class="img"
+            src="./assets/png/deactive.png"
+            alt=""
+          />
+          <img
+            id="menu-active"
+            class="img display-none-2"
+            src="./assets/png/active.png"
+            alt=""
+          />
+        </div>
+      </nav>
+      <nav class="side-nav">
+        <a href="#home"><div class="link-dot-indicator icon"></div></a>
+        <a href="#about"><div class="link-dot-indicator icon"></div></a>
+        <a href="#protfolio"><div class="link-dot-indicator icon"></div></a>
+        <a href="#project"><div class="link-dot-indicator icon"></div></a>
+        <a href="#contact"><div class="link-dot-indicator icon"></div></a>
+      </nav>
+
+      <nav class="mobile-nav mobile-nav-deactive_i" id="mobile-nav-box">
+        <div class="logo-box">
+          <div class="logo"><img src="./assets/logo/logo.svg" alt="" /></div>
+          <div class="name">.I DEV HUB</div>
+        </div>
+        <div class="line">
+          <img src="./assets/line/hr2.svg" alt="" />
+        </div>
+        <div class="mini-title">
+          <span class="txt">Menu</span>
+          <span class="icon" onclick="changeMobileNavbarStatus()">
+            <img src="./assets/png/cross.png" alt="" />
+          </span>
+        </div>
+        <div class="nav-box mobile-link">
+          <Mobilelink
+            label="home"
+            icon="./assets/nav/home-icon-silhouette-svgrepo-com.svg"
+            hashurl="#home"
+            link="#home"
+            :ishome="true"
+          ></Mobilelink>
+          <Mobilelink
+            label="about"
+            icon="./assets/nav/Page-1.svg"
+            hashurl="#about"
+            link="#about"
+          ></Mobilelink>
+          <Mobilelink
+            label="portfolio"
+            icon="./assets/nav/Group 3.svg"
+            hashurl="#protfolio"
+            link="#protfolio"
+          ></Mobilelink>
+          <Mobilelink
+            label="project"
+            icon="./assets/nav/Path 8.svg"
+            hashurl="#project"
+            link="#project"
+          ></Mobilelink>
+          <Mobilelink
+            label="contact"
+            icon="./assets/nav/Path 3.svg"
+            hashurl="#contact"
+            link="#contact"
+          ></Mobilelink>
+        </div>
+      </nav>
+    </header>
+
+    <section class="home-display indi-box" id="home">
+      <div class="item txt-anim">
+        <p class="mini-header">
+          <span id="wc" class=""><Textanimations text="Welcome to" /> </span
+          ><samp class="name">
+            <Textanimations text="AI DEV HUB!," delay="1000" />
+          </samp>
+        </p>
+        <p class="main-header">
+          <Textanimations text="I am Asraful Islam," delay="2000" />
+        </p>
+        <p class="des">
+          <Textanimations
+            text=" A passionate and skilled full stack web developer with experience in
+          building modern, responsive, and user-friendly websites and
+          applications. My expertise spans across both front-end and back-end
+          development, enabling me to create complete and seamless solutions for
+          my clients."
+            delay="3000"
+            speed="20"
+          />
+        </p>
+        <div class="media">
+          <a href="https://github.com/asraful808088">
+            <div class="icon">
+              <img src="./assets/media/Path 128.svg" alt="" />
+            </div>
+          </a>
+          <a href="">
+            <div class="icon">
+              <img src="./assets/media/Path 130.svg" alt="" />
+            </div>
+          </a>
+          <a href="https://www.kaggle.com/mdasraful00000000">
+            <div class="icon">
+              <img src="./assets/media/Path 131.svg" alt="" />
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/md-asraful-399a86250/">
+            <div class="icon">
+              <img src="./assets/media/Path 132.svg" alt="" />
+            </div>
+          </a>
+
+          <a href="https://x.com/asraful808088">
+            <div class="icon">
+              <img src="./assets/media/x-social-media-round-icon.svg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="button-box">
+          <a href="#protfolio">
+            <div class="button" role="button">Protfolio</div>
+          </a>
+          <a href="#about">
+            <div class="button" role="button">Resume</div>
+          </a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="image">
+          <div class="bg-circle"></div>
+          <img src="./assets/project/Mask Group 4.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about indi-box" id="about">
+      <div class="about-header">About Me</div>
+      <div class="custom-hr"><img src="./assets/line/hr1.svg" alt="" /></div>
+      <div class="text-context">
+        <div class="sub-text-context">
+          <div class="sub-text-context-header">Discover My Journey</div>
+          <div class="wave">Full-Stack Developer & AI Explorer</div>
+          <p>
+            I began my coding journey in 2021. Over the span of 14-16 months, I
+            diligently acquired proficiency in 5-6 programming languages
+            including C, C++, Java, Python, JavaScript, and Dart. My approach
+            has always been to deeply understand programming concepts and the
+            underlying principles, leveraging a variety of learning resources.
+          </p>
+          <p>
+            This methodical approach led me to explore numerous front-end and
+            back-end frameworks. Initially, I learned raw Node.js with Express,
+            which helped me grasp about 30% of back-end development concepts.
+            Progressing to Django, I gained insights into file distribution,
+            management systems, and system design. Finally, mastering Laravel
+            significantly enhanced my understanding of server-side operations
+            and management. Additionally, I delved into Go and Rust with Actix
+            servers, and front-end technologies like React, Next.js, Vue.js, and
+            Angular, along with state management libraries such as Redux, NgRx,
+            Vuex, and MobX.
+          </p>
+          <p>
+            Beyond web development, I have extensive experience with Flutter and
+            its state management libraries like Provider, BLoC, and RxDart.
+            While I also explored Java Android development, I found it less
+            appealing compared to other frameworks, focusing mainly on MVC
+            (Model View Controller) and MVVM (Model View ViewModel) patterns. My
+            passion extends to machine learning, where I have basic experience
+            and have attempted to create chatbot builder tools akin to Google
+            Dialogflow.
+          </p>
+          <div class="wave">Note</div>
+
+          <p class="">
+            The skill ratings below are based on my regular working experience,
+            not how much of the full documentation I’ve studied. For example, a
+            3/5 in Laravel doesn’t mean I’ve only learned 60% — it means I’ve
+            learned the most commonly used parts and use them regularly. The
+            rest, I often pick up from online resources while working — which
+            helps me solve problems in real time.
+          </p>
+          <p>
+            I always focus on learning the core concepts and fundamentals first.
+            Since I’ve explored many tech stacks, it can be hard to balance
+            everything at once. But whenever I start a project, I quickly
+            remember and apply what I need. Most of my learning comes from
+            real-world projects and practical problem-solving.
+          </p>
+        </div>
+        <div class="image-bg">
+          <div class="shadow"></div>
+          <img src="./assets/icon/noun-about-760871.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="protfolio prot-card">
+      <div class="protfolio-header indi-box" id="protfolio">
+        Learning Experience
+      </div>
+      <div class="custom-hr"><img src="./assets/line/hr1.svg" alt="" /></div>
+      <div class="part">Frontend-Core</div>
+
+      <div class="card-items">
+        <Card
+          icon="./assets/png/html.png"
+          :startcount="4"
+          label="HTML"
+          des="I have strong experience writing semantic, well-structured HTML for building clean, accessible, and SEO-friendly layouts. I understand the use of proper tags, document structure, and attributes to create consistent and responsive interfaces across different browsers."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (7).png"
+          :startcount="4"
+          label="Css"
+          des="I am skilled in using modern CSS techniques like Flexbox and Grid for layout, along with transitions, keyframe animations, and media queries to create visually appealing and responsive designs. I’ve also applied BEM conventions and structured stylesheets for scalability."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (5).png"
+          :startcount="4"
+          label="Javascript"
+          des="I have solid knowledge of JavaScript fundamentals, including ES6+ features like destructuring, promises, and async/await. I use JavaScript for DOM manipulation, event handling, form validation, and building dynamic client-side functionality in web applications."
+        ></Card>
+      </div>
+
+      <div class="part">Frontend Style Equipment</div>
+
+      <div class="card-items front-core-item">
+        <Card
+          icon="./assets/png/pngwing.com (8).png"
+          :startcount="4"
+          label="SASS"
+          des="I’m highly comfortable using SASS to write clean, modular, and maintainable styles. I utilize features like variables, mixins, nesting, and partials to efficiently manage large-scale stylesheets and keep my CSS well-organized."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (9).png"
+          :startcount="3.5"
+          label="Bootstrap"
+          des="I’ve used Bootstrap mainly for smaller or rapid prototyping projects. While I understand its grid system and core components, I rely more on SASS and Tailwind CSS in my current workflow. My Bootstrap experience is intermediate.
+
+"
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (10).png"
+          :startcount="4"
+          label="Tailwind"
+          des="Tailwind is one of my preferred tools for styling. I use its utility-first classes to build responsive, consistent designs quickly. It speeds up my development process and allows me to focus on structure and reusability with minimal custom CSS."
+        ></Card>
+      </div>
+
+      <div class="part">Frontend Library</div>
+
+      <div class="card-items front-core-item" id="front-lib">
+        <Card
+          icon="./assets/png/pngwing.com (1).png"
+          :startcount="3.5"
+          label="Vue"
+          des="I’ve explored Vue.js for building reactive interfaces and small projects. I understand Vue directives, components, and lifecycle hooks, and can use it effectively, but I currently focus more on React.,
+        tempore perspiciatis."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (2).png"
+          :startcount="3.5"
+          label="Anguler"
+          des="My experience with Angular includes working with components, services, and routing. I can structure a basic Angular app, though I haven't used it as extensively as React. I’m open to deepening my expertise.,
+      tempore perspiciatis."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (3).png"
+          :startcount="4"
+          label="React"
+          des="React is my strongest frontend library. I use it to build dynamic, component-based applications with efficient state management using hooks and context. I’m comfortable with React Router, controlled forms, and integrating APIs."
+        ></Card>
+        <Card
+          icon="./assets/png/nextjs-icon.png"
+          :startcount="4"
+          label="Next.js"
+          des="A powerful React framework with excellent performance, flexibility, and a strong ecosystem for building modern web apps."
+        ></Card>
+
+        <Card
+          icon="./assets/png/nuxt-js-icon.png"
+          :startcount="4"
+          label="Nuxt.js"
+          des="A feature-rich Vue framework that simplifies development, though slightly behind Next.js in ecosystem maturity and performance."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (4).png"
+          :startcount="3"
+          label="Jquery"
+          des="I’ve used jQuery primarily for DOM manipulation and small utility functions in legacy projects. While I know the syntax and core functions, it’s not a part of my modern development stack."
+        ></Card>
+      </div>
+
+      <div class="part">Frontend State Management Lib</div>
+
+      <div class="card-items front-core-item" id="front-lib">
+        <Card
+          icon="./assets/png/pngwing.com (19).png"
+          :startcount="4"
+          label="Redux"
+          des="Redux is my go-to state management library for React applications. I’m proficient in Redux Toolkit, managing complex state logic, middleware like Redux Thunk, and integrating with APIs efficiently."
+        ></Card>
+        <Card
+          icon="./assets/png/Group 6.png"
+          :startcount="3.5"
+          label="Vuex"
+          des="I've used Vuex in Vue.js projects for managing centralized state. I understand how to structure modules, handle mutations, and use Vue DevTools for debugging."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (20).png"
+          :startcount="4"
+          label="RXjs"
+          des="I use RxJS primarily within Angular and other reactive programming needs. I’m confident with observables, operators, and handling asynchronous data streams effectively."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (22).png"
+          :startcount="3"
+          label="Mobx"
+          des="I have basic experience with MobX and understand the observable and reaction system. While not my primary choice, I can use it in smaller React apps when needed."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (21).png"
+          :startcount="4"
+          label="NgRx"
+          des="In Angular applications, I use NgRx for scalable state management. I'm comfortable with actions, reducers, selectors, and effects, ensuring clean, maintainable architecture."
+        ></Card>
+      </div>
+
+      <div class="part">Preprocessing Tools</div>
+
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/pngwing.com (16).png"
+          :startcount="2"
+          label="XD"
+          des="I’ve used Adobe XD for basic UI/UX design, wireframing, and prototyping web interfaces. I understand component layout and interactive flows."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (18).png"
+          :startcount="2"
+          label="Illustrator"
+          des="I have beginner-level experience with Illustrator, mainly for creating icons, simple graphics, and assets used in web or mobile interfaces."
+        ></Card>
+      </div>
+      <div class="part">Backend & Framework</div>
+
+      <div class="card-items front-core-item" id="backend">
+        <Card
+          icon="./assets/png/pngwing.com (6).png"
+          :startcount="4"
+          label="Nodejs"
+          des="I regularly use Node.js to build fast, scalable server-side applications. I’m confident in working with asynchronous operations, APIs, and modern tooling in the Node ecosystem."
+        ></Card>
+
+        <Card
+          icon="./assets/png/django.png"
+          :startcount="4"
+          label="Django"
+          des="I have strong experience using Django for full-featured backend applications. I'm comfortable with the ORM, authentication, admin panel, and structuring large-scale apps."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (13).png"
+          :startcount="3"
+          label="Laravel"
+          des="I’ve worked with Laravel for backend development in PHP projects. While it’s not my primary stack, I understand its MVC structure, routing, and ORM (Eloquent) fundamentals."
+        ></Card>
+
+        <!-- <Card
+          icon="./assets/png/nest-js-icon.png"
+          :startcount="4"
+          label="Nestjs"
+          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+  amet iure nesciunt expedita nisi facere illo error fuga doloremque
+  quas itaque, porro beatae atque quae, aperiam earum. Possimus,
+  tempore perspiciatis."
+          :halfst="true"
+        ></Card> -->
+
+        <Card
+          icon="./assets/png/pngwing.com (23).png"
+          :startcount="3.5"
+          label="FastAPI"
+          des="I use FastAPI for building high-performance APIs in Python. I appreciate its async support, type hints, and speed, making it ideal for lightweight and ML-related services."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com.png"
+          :startcount="4"
+          label="Express"
+          des="Express is my preferred framework with Node.js. I use it to create RESTful APIs, handle routing, middleware, and integrate with databases like MongoDB and PostgreSQL."
+        ></Card>
+
+        <!-- <Card
+          icon="./assets/png/Path 19.png"
+          :startcount="4"
+          label="Flask"
+          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+amet iure nesciunt expedita nisi facere illo error fuga doloremque
+quas itaque, porro beatae atque quae, aperiam earum. Possimus,
+tempore perspiciatis."
+          :halfst="true"
+        ></Card> -->
+      </div>
+      <div class="part">Database</div>
+
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/pngwing.com (25).png"
+          :startcount="3"
+          label="Mysql"
+          des="I have foundational experience using MySQL for structured data storage, executing queries, joins, and managing relationships. I can set up and integrate it with web apps effectively."
+        ></Card>
+        <Card
+          icon="./assets/png/pngwing.com (26).png"
+          :startcount="3.5"
+          label="Postgresql"
+          des="I use PostgreSQL for relational database design with features like indexing, joins, and data integrity. I’m comfortable writing SQL queries, designing normalized schemas, and connecting it with backend frameworks."
+          :halfst="true"
+        ></Card>
+        <Card
+          icon="./assets/png/mongo.png"
+          :startcount="3.5"
+          label="Mongodb"
+          des="I work with MongoDB for flexible, document-based storage in modern applications. I use Mongoose and native drivers for schema modeling and querying in Node.js environments."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (27).png"
+          :startcount="3"
+          label="Redis"
+          des="I’ve used Redis primarily for caching and session storage in backend systems. I understand its key-value store model and how to integrate it to improve performance."
+        ></Card>
+      </div>
+      <div class="part">Extra Lib</div>
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/clipart780352.png"
+          :startcount="3"
+          label="Puppeteer"
+          des="I’ve worked with Puppeteer for browser automation tasks like web scraping, testing UI workflows, and PDF generation. I understand page navigation, DOM manipulation, and handling headless Chrome."
+        ></Card>
+        <Card
+          icon="./assets/png/webrtc.png"
+          :startcount="3.5"
+          label="WebRTC"
+          des="I have experience using WebRTC to implement peer-to-peer audio/video communication and screen sharing. I understand signaling, ICE candidates, and handling media streams in the browser."
+          :halfst="true"
+        ></Card>
+        <Card
+          icon="./assets/png/socket.png"
+          :startcount="4"
+          label="Socket.IO"
+          des="I use Socket.IO to build real-time features like chat systems and live updates in web applications. I'm comfortable with event-driven communication, broadcasting, and managing rooms and namespaces."
+        ></Card>
+      </div>
+      <div class="part">Mobile-Framework</div>
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/pngwing.com (12).png"
+          :startcount="3"
+          label="Android (java)"
+          des="I have foundational experience developing native Android apps in Java. I understand key concepts like activities, intents, layouts, and handling user input, though Flutter is my current primary mobile framework."
+        ></Card>
+        <Card
+          icon="./assets/png/pngwing.com (11).png"
+          :startcount="4"
+          label="Flutter (android)"
+          des="I use Flutter to build responsive and cross-platform Android apps with clean UI and smooth performance. I’m confident in widget-based design, state management, and integrating APIs and Firebase."
+        ></Card>
+      </div>
+
+      <div class="part">State Management Lib</div>
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/pngwing.com (19).png"
+          :startcount="4"
+          label="Flutter-Redux"
+          des="I’ve used Redux in Flutter apps to manage global state in a predictable and scalable way. I'm comfortable with reducers, actions, middleware, and async data handling."
+        ></Card>
+        <Card
+          icon="./assets/png/pngwing.com (20).png"
+          :startcount="4"
+          label="Rx-Dart"
+          des="I use RxDart for reactive programming in Flutter, handling streams, Subjects, and complex state flows. I integrate it with UI and logic layers for responsive, real-time app behavior."
+        ></Card>
+        <Card
+          icon="./assets/png/flutter_favorite.png"
+          :startcount="4"
+          label="Provider"
+          des="I’ve used Provider extensively for state management in Flutter, especially for smaller and medium-sized apps. I understand ChangeNotifier, context usage, and how to structure scalable Provider-based architecture."
+        ></Card>
+
+        <Card
+          icon="./assets/png/126981491-e13d63ec-932d-4640-a9c2-927259ce48a7.png"
+          :startcount="4"
+          label="Bloc"
+          des="I implement Bloc to separate business logic and UI effectively. I'm familiar with Cubit, BlocListener, and stream-based event handling to maintain clean architecture and predictable state transitions."
+        ></Card>
+      </div>
+
+      <div class="part">Machine & Deep learning Lib</div>
+
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/kisspng-scikit-learn-python-computer-icons-scikit-image-ma-data-science-ermlab-software-5b67c769163b57.8768186215335279130911.png"
+          :startcount="3"
+          label="Sklearn"
+          des="I’ve used scikit-learn for training and evaluating machine learning models. I'm familiar with tasks like classification, regression, and model selection using pipelines and cross-validation."
+        ></Card>
+        <Card
+          icon="./assets/png/pngwing.com (15).png"
+          :startcount="3"
+          label="Tensorflow"
+          des="I’ve worked with TensorFlow for building and training neural networks, especially in beginner to intermediate deep learning projects. I understand model architecture, compiling, and training workflows."
+        ></Card>
+
+        <Card
+          icon="./assets/png/Pandas.png"
+          :startcount="3"
+          label="Panda"
+          des="I use pandas for data manipulation and analysis. I'm comfortable with DataFrames, filtering, grouping, and cleaning data for preprocessing in machine learning pipelines."
+        ></Card>
+        <Card
+          icon="./assets/png/icons8-numpy-480.png"
+          :startcount="3"
+          label="Numpy"
+          des="I use NumPy for numerical computations, array operations, and matrix manipulations — particularly when working with data transformations or custom ML workflows."
+        ></Card>
+      </div>
+
+      <div class="part">Helper-Softwere</div>
+
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/pngwing.com (17).png"
+          :startcount="3"
+          label="VS Code"
+          des="My primary code editor for web and backend development. I’m familiar with extensions, debugging, Git integration, and workspace management."
+        ></Card>
+        <Card
+          icon="./assets/png/jupyter-seeklogo.png"
+          :startcount="3"
+          label="Jupyter Notebook"
+          des="I use Jupyter for data science and machine learning tasks. It’s useful for running Python code in cells, visualizing data, and documenting experiments interactively."
+        ></Card>
+
+        <Card
+          icon="./assets/png/postgresql-inc-seeklogo.png"
+          :startcount="3"
+          label="Postgresql Admin $"
+          des="I’ve used graphical tools like pgAdmin to manage PostgreSQL databases — including running queries, designing schemas, and monitoring database performance."
+        ></Card>
+
+        <Card
+          icon="./assets/png/other/pngwing.com.png"
+          :startcount="3"
+          label="Xampp"
+          des="I use XAMPP to create local development environments for PHP and MySQL-based projects. It’s helpful for testing and deploying Laravel or basic PHP apps."
+        ></Card>
+
+        <Card
+          icon="./assets/png/mongo.png"
+          :startcount="3"
+          label="Mongodb Compass"
+          des="MongoDB Compass helps me visually manage my NoSQL data. I use it for schema exploration, running queries, and managing collections while developing with MongoDB."
+        ></Card>
+      </div>
+
+      <div class="project-scroller">
+        <div class="stap">
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+        </div>
+        <div class="stap">
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+        </div>
+        <div class="stap">
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+          <span class=""> Project</span>
+          <span class="line"> Project</span>
+        </div>
+      </div>
+      <div class="space"></div>
+      <div class="part indi-box" id="project">Projects</div>
+
+      <div class="project">
+        <div class="bg">
+          <div class="icon">
+            <img src="./assets/logo/qbank/logo.svg" alt="" />
+          </div>
+        </div>
+        <div class="image-item">
+          <div class="com pc">
+            <img src="./assets/project/Group 167.png" alt="" />
+          </div>
+          <div class="com mobile">
+            <img src="./assets/project/laptop.png" alt="" />
+          </div>
+          <div class="com tab">
+            <img src="./assets/project/mobile.png" alt="" />
+          </div>
+          <div class="com laptop">
+            <img src="./assets/project/tab.png" alt="" />
+          </div>
+        </div>
+        <div class="text-context">
+          <div class="project-header">Q-BANK</div>
+          <div class="des">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
+            aliquam doloremque atque, tempore blanditiis quisquam quo accusamus
+            ea repellat inventore delectus maxime, maiores saepe distinctio
+            beatae aliquid qui iusto optio? Ipsa ad cupiditate nulla harum ab,
+            pariatur delectus sapiente perspiciatis corrupti fugiat provident
+            cum iure in? Mollitia similique laboriosam, saepe minima eos iste
+            provident labore est illum itaque. Molestiae, quia! Odit, quibusdam?
+            Explicabo ipsum odio, quo tempora reiciendis beatae aut laboriosam
+            esse? Voluptates, qui minus? Fugiat culpa laborum illum praesentium
+            temporibus odit consectetur minima et odio? Molestiae praesentium
+            qui quia? Laborum, quam modi voluptas optio expedita, accusantium
+            est molestiae illo nam quaerat esse praesentium nesciunt iusto
+            ducimus, consequatur quasi ipsa non aut ab exercitationem
+            necessitatibus fugiat doloremque vero! Ipsam, dolore.
+          </div>
+          <div class="makeby">
+            <div class="icon">
+              <img src="./assets/png/django.png" alt="" />
+            </div>
+
+            <div class="icon">
+              <img src="./assets/png/pngwing.com (26).png" alt="" />
+            </div>
+            <div class="icon">
+              <img src="./assets/png/pngwing.com (8).png" alt="" />
+            </div>
+            <div class="icon">
+              <img src="./assets/png/pngwing.com (2).png" alt="" />
+            </div>
+          </div>
+
+          <div class="button-box">
+            <div class="button" role="button">
+              <span class="btn-bg">
+                <span class="re-bg">Source-Code</span>
+              </span>
+              <span>Source-Code</span>
+            </div>
+            <div
+              class="button"
+              role="button"
+              onclick="changeVideoFrameShowStatus(3)"
+            >
+              <span class="btn-bg"> <span class="re-bg">Video</span> </span>
+              <span>Video</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part">Services</div>
+      <div class="custom-hr"><img src="./assets/line/hr1.svg" alt="" /></div>
+
+      <div class="card-items front-core-item" id="pt">
+        <Card
+          icon="./assets/png/pngwing.com (1).png"
+          :startcount="3.5"
+          label="Vue"
+          des="I’ve explored Vue.js for building reactive interfaces and small projects. I understand Vue directives, components, and lifecycle hooks, and can use it effectively, but I currently focus more on React.,
+        tempore perspiciatis."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (2).png"
+          :startcount="3.5"
+          label="Anguler"
+          des="My experience with Angular includes working with components, services, and routing. I can structure a basic Angular app, though I haven't used it as extensively as React. I’m open to deepening my expertise.,
+      tempore perspiciatis."
+          :halfst="true"
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (3).png"
+          :startcount="4"
+          label="React"
+          des="React is my strongest frontend library. I use it to build dynamic, component-based applications with efficient state management using hooks and context. I’m comfortable with React Router, controlled forms, and integrating APIs."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (6).png"
+          :startcount="4"
+          label="Nodejs"
+          des="I regularly use Node.js to build fast, scalable server-side applications. I’m confident in working with asynchronous operations, APIs, and modern tooling in the Node ecosystem."
+        ></Card>
+
+        <Card
+          icon="./assets/png/django.png"
+          :startcount="4"
+          label="Django"
+          des="I have strong experience using Django for full-featured backend applications. I'm comfortable with the ORM, authentication, admin panel, and structuring large-scale apps."
+        ></Card>
+        <Card
+          icon="./assets/png/pngwing.com.png"
+          :startcount="4"
+          label="Express"
+          des="Express is my preferred framework with Node.js. I use it to create RESTful APIs, handle routing, middleware, and integrate with databases like MongoDB and PostgreSQL."
+        ></Card>
+
+        <Card
+          icon="./assets/png/pngwing.com (26).png"
+          :startcount="3.5"
+          label="Postgresql"
+          des="I use PostgreSQL for relational database design with features like indexing, joins, and data integrity. I’m comfortable writing SQL queries, designing normalized schemas, and connecting it with backend frameworks."
+          :halfst="true"
+        ></Card>
+        <Card
+          icon="./assets/png/mongo.png"
+          :startcount="3.5"
+          label="Mongodb"
+          des="I work with MongoDB for flexible, document-based storage in modern applications. I use Mongoose and native drivers for schema modeling and querying in Node.js environments."
+          :halfst="true"
+        ></Card>
+      </div>
+
+      <div class="part indi-box" id="contact">Contact</div>
+      <div class="custom-hr"><img src="./assets/line/hr1.svg" alt="" /></div>
+      <div class="card-items front-core-item">
+        <form id="contact-form" class="form-box">
+          <div class="form-item">
+            <div class="input">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-item">
+            <div class="input">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-item">
+            <div class="input">
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <div class="input"><button type="submit">Send Message</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script src="./scripts/landing/components/menu-nav-item/navItem.js"></script>
+
+    <script src="./scripts/landing/components/prot-card/card.js"></script>
+
+    <script src="./scripts/landing/landing.js"></script>
+  </body>
+</html>
