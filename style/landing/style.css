@@ -1279,6 +1279,9 @@ body .protfolio .project .image-item .com:nth-child(2){
   body .protfolio .card-items .form-box .form-item {
     flex-direction: column;
   }
+  .bot-indi-box-2{
+    display: none !important;
+  }
 }
 @media (max-width: 500px) {
   body .about .text-context {
